@@ -1,6 +1,6 @@
 import { Container, VStack, Text, Box, Button } from "@chakra-ui/react";
 import { FaWallet } from "react-icons/fa";
-import backgroundDesign from "../public/images/background-design.png";
+import backgroundDesign from "../../public/images/background-design.png";
 
 const Index = () => {
   return (
@@ -12,7 +12,10 @@ const Index = () => {
       flexDirection="column" 
       justifyContent="center" 
       alignItems="center" 
-      bg="purple.900" 
+      bg="purple.900"
+      backgroundImage={`url(${backgroundDesign})`}
+      backgroundSize="cover"
+      backgroundRepeat="no-repeat" 
       color="white" 
       borderRadius="lg" 
       mx={{ base: "10px", md: "30px" }} 
