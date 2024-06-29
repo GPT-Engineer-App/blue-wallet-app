@@ -1,11 +1,14 @@
-import { Box, Text, Flex, Button, IconButton, useColorMode, useDisclosure } from "@chakra-ui/react";
+import { Box, Flex, IconButton, Text, Button, Link, Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure, Divider, useColorMode, Switch, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import { FaBars, FaBell, FaHome, FaUser, FaCog, FaQrcode, FaExchangeAlt, FaWallet } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const Ewallet = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isDark = colorMode === "dark";
+
+  const handleToggleTheme = () => {
+    toggleColorMode();
+  };
 
   return (
     <Box
@@ -59,7 +62,30 @@ const Ewallet = () => {
             />
           </Flex>
         </Flex>
+        <Divider borderColor="whiteAlpha.600" />
       </Box>
+
+      <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Menu</DrawerHeader>
+          <DrawerBody>
+            <Flex direction="column">
+              <Button as="a" href="#" leftIcon={<FaHome />} variant="ghost" justifyContent="flex-start" width="100%">Home</Button>
+              <Button as="a" href="#" leftIcon={<FaUser />} variant="ghost" justifyContent="flex-start" width="100%">Profile</Button>
+              <Button as="a" href="#" leftIcon={<FaCog />} variant="ghost" justifyContent="flex-start" width="100%">Settings</Button>
+              <Button as="a" href="#" leftIcon={<FaBell />} variant="ghost" justifyContent="flex-start" width="100%">Notifications</Button>
+              <Button as="a" href="#" leftIcon={<FaQrcode />} variant="ghost" justifyContent="flex-start" width="100%">QR Code</Button>
+              <Button as="a" href="#" leftIcon={<FaExchangeAlt />} variant="ghost" justifyContent="flex-start" width="100%">Transactions</Button>
+              <Button as="a" href="/ewallet" leftIcon={<FaWallet />} variant="ghost" justifyContent="flex-start" width="100%">Wallet</Button>
+            </Flex>
+          </DrawerBody>
+          <DrawerFooter>
+            <Button variant="outline" mr={3} onClick={onClose}>Close</Button>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
 
       <Box
         width="100%"
@@ -125,6 +151,36 @@ const Ewallet = () => {
             >
               <FaQrcode size="32px" color="blue.500" />
             </Box>
+          </Box>
+          <Box flex="1" display="flex" justifyContent="center" alignItems="center">
+            <Menu>
+              <MenuButton
+                as={IconButton}
+                icon={<FaCog />}
+                aria-label="Settings"
+                variant="ghost"
+                color="white"
+                fontSize="24px"
+              />
+              <MenuList bg="gray.700" color="white">
+                <MenuItem>
+                  <Flex alignItems="center">
+                    <Text mr={2}>Dark Mode</Text>
+                    <Switch
+                      isChecked={isDark}
+                      onChange={handleToggleTheme}
+                      colorScheme="purple"
+                      bg={isDark ? "gray.700" : "gray.300"}
+                      borderColor={isDark ? "gray.600" : "gray.400"}
+                      _checked={{
+                        bg: "purple.500",
+                        borderColor: "purple.500",
+                      }}
+                    />
+                  </Flex>
+                </MenuItem>
+              </MenuList>
+            </Menu>
           </Box>
           <Box flex="1" display="flex" justifyContent="center" alignItems="center">
             <FaUser size="24px" color="white" />
