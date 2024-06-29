@@ -94,7 +94,7 @@ const Index = () => {
               <Button as="a" href="#" leftIcon={<FaBell />} variant="ghost" justifyContent="flex-start" width="100%">Notifications</Button>
               <Button as="a" href="#" leftIcon={<FaQrcode />} variant="ghost" justifyContent="flex-start" width="100%">QR Code</Button>
               <Button as="a" href="#" leftIcon={<FaExchangeAlt />} variant="ghost" justifyContent="flex-start" width="100%">Transactions</Button>
-              <Button as="a" href="#" leftIcon={<FaWallet />} variant="ghost" justifyContent="flex-start" width="100%">Wallet</Button>
+              <Button as="a" href="/ewallet" leftIcon={<FaWallet />} variant="ghost" justifyContent="flex-start" width="100%">Wallet</Button>
             </Flex>
           </DrawerBody>
           <DrawerFooter>
@@ -164,7 +164,9 @@ const Index = () => {
       >
         <Box display="flex" justifyContent="space-between" width="100%">
           <Box flex="1" display="flex" justifyContent="center" alignItems="center">
-            <FaWallet size="24px" color="white" />
+            <Link to="/ewallet">
+              <FaWallet size="24px" color="white" />
+            </Link>
           </Box>
           <Box flex="1" display="flex" justifyContent="center" alignItems="center">
             <FaExchangeAlt size="24px" color="white" />
