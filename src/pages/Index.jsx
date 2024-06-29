@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Box, Flex, IconButton, Text, Switch, useColorMode, Menu, MenuButton, MenuList, MenuItem, Image, Divider, Button, Link } from "@chakra-ui/react";
-import { FaHome, FaUser, FaCog, FaBell, FaQrcode, FaChartBar, FaBars } from "react-icons/fa";
+import { FaHome, FaUser, FaCog, FaBell, FaQrcode, FaChartBar, FaBars, FaWallet } from "react-icons/fa";
 
 const darkPurple = "#4B0082"; // Dark Purple
 const mediumPurple = "#6A0DAD"; // Medium Purple
@@ -140,7 +140,7 @@ const Index = () => {
       >
         <Box display="flex" justifyContent="space-between" width="100%">
           <Box flex="1" display="flex" justifyContent="center" alignItems="center">
-            <FaHome size="24px" color="white" />
+            <FaWallet size="24px" color="white" />
           </Box>
           <Box flex="1" display="flex" justifyContent="center" alignItems="center">
             <FaChartBar size="24px" color="white" />
