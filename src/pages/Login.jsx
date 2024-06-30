@@ -118,7 +118,7 @@ const Login = () => {
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        bg="blue"
+        bg="#1a365d" // Dark Blue
       >
       </Box>
 
