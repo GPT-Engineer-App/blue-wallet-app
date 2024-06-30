@@ -50,7 +50,7 @@ const Ewallet = () => {
             onClick={onOpen}
           />
           <Box textAlign="center">
-            <Text fontSize="lg" fontWeight="bold" color="white">E-wallet</Text>
+            <Text fontSize="lg" fontWeight="bold" color="white">Bills Payment</Text>
           </Box>
           <Flex>
             <IconButton
