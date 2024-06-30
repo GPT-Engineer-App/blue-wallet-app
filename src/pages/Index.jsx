@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Container, Box, Flex, IconButton, Text, Switch, useColorMode, Menu, MenuButton, MenuList, MenuItem, Image, Divider, Button, Link, Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure } from "@chakra-ui/react";
-import { FaHome, FaUser, FaCog, FaBell, FaQrcode, FaExchangeAlt, FaBars, FaWallet } from "react-icons/fa";
+import { Container, Box, Flex, IconButton, Text, Switch, useColorMode, Menu, MenuButton, MenuList, MenuItem, Image, Divider, Button, Link } from "@chakra-ui/react";
+import { FaHome, FaUser, FaCog, FaBell, FaQrcode, FaChartBar, FaBars, FaWallet } from "react-icons/fa";
 
 const darkPurple = "#4B0082"; // Dark Purple
 const mediumPurple = "#6A0DAD"; // Medium Purple
@@ -16,7 +16,6 @@ const dirtyWhite = "#E8E8E8"; // Dirty White Color
 const Index = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [isDark, setIsDark] = useState(colorMode === "dark");
-  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleToggleTheme = () => {
     toggleColorMode();
@@ -44,13 +43,13 @@ const Index = () => {
     >
       <Box 
         width="100%" 
-        bg="white" // Changed to white
+        bg={headerFooterColor} 
         p={4} 
         borderRadius="0 0 2xl 2xl"
         color="white"
         position="sticky"
         top="0"
-        zIndex="9999"
+        zIndex="1000"
         boxShadow="0px 4px 6px rgba(0, 0, 0, 0.1)"
       >
         <Flex justifyContent="space-between" alignItems="center" mb={4}>
@@ -60,7 +59,6 @@ const Index = () => {
             variant="ghost"
             color="white"
             fontSize="24px"
-            onClick={onOpen}
           />
           <Box textAlign="center">
             <Box mb={2}>
@@ -81,28 +79,6 @@ const Index = () => {
         <Divider borderColor="whiteAlpha.600" />
       </Box>
 
-      <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader>Menu</DrawerHeader>
-          <DrawerBody>
-            <Flex direction="column">
-              <Button as="a" href="#" leftIcon={<FaHome />} variant="ghost" justifyContent="flex-start" width="100%">Home</Button>
-              <Button as="a" href="#" leftIcon={<FaUser />} variant="ghost" justifyContent="flex-start" width="100%">Profile</Button>
-              <Button as="a" href="#" leftIcon={<FaCog />} variant="ghost" justifyContent="flex-start" width="100%">Settings</Button>
-              <Button as="a" href="#" leftIcon={<FaBell />} variant="ghost" justifyContent="flex-start" width="100%">Notifications</Button>
-              <Button as="a" href="#" leftIcon={<FaQrcode />} variant="ghost" justifyContent="flex-start" width="100%">QR Code</Button>
-              <Button as="a" href="#" leftIcon={<FaExchangeAlt />} variant="ghost" justifyContent="flex-start" width="100%">Transactions</Button>
-              <Button as="a" href="/billspayment" leftIcon={<FaWallet />} variant="ghost" justifyContent="flex-start" width="100%">Wallet</Button>
-            </Flex>
-          </DrawerBody>
-          <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>Close</Button>
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer>
-
       {/* Body Container (c1) */}
       <Box 
         width="100%" 
@@ -118,8 +94,8 @@ const Index = () => {
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        bg="#1a365d" // Dark Blue
       >
+        <Image src="https://marcroland84.files.wordpress.com/2024/06/copy-of-innovate-hub-2-1.png?w=1024" alt="Centered Image" objectFit="contain" maxH="100%" maxW="100%" />
       </Box>
 
       {/* Login Button and Text Container */}
@@ -152,7 +128,7 @@ const Index = () => {
       <Box 
         as="footer"
         width="100%"
-        bg="white" // Changed to white
+        bg={headerFooterColor}  
         height="60px"
         position="sticky"
         bottom="0"
@@ -160,17 +136,14 @@ const Index = () => {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        zIndex="9999"
-        color="white"
+        zIndex="1000"
       >
         <Box display="flex" justifyContent="space-between" width="100%">
           <Box flex="1" display="flex" justifyContent="center" alignItems="center">
-            <Link to="/billspayment">
-              <FaWallet size="24px" color="white" />
-            </Link>
+            <FaWallet size="24px" color="white" />
           </Box>
           <Box flex="1" display="flex" justifyContent="center" alignItems="center">
-            <FaExchangeAlt size="24px" color="white" />
+            <FaChartBar size="24px" color="white" />
           </Box>
 
           <Box flex="1" textAlign="center" position="relative">
