@@ -44,13 +44,13 @@ const Login = () => {
     >
       <Box 
         width="100%" 
-        bg={headerFooterColor} 
+        bg="gray.900" 
         p={4} 
         borderRadius="0 0 2xl 2xl"
         color="white"
         position="sticky"
         top="0"
-        zIndex="1000"
+        zIndex="9999"
         boxShadow="0px 4px 6px rgba(0, 0, 0, 0.1)"
       >
         <Flex justifyContent="space-between" alignItems="center" mb={4}>
@@ -152,7 +152,7 @@ const Login = () => {
       <Box 
         as="footer"
         width="100%"
-        bg={headerFooterColor}  
+        bg="gray.900"  
         height="60px"
         position="sticky"
         bottom="0"
@@ -160,7 +160,8 @@ const Login = () => {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        zIndex="1000"
+        zIndex="9999"
+        color="white"
       >
         <Box display="flex" justifyContent="space-between" width="100%">
           <Box flex="1" display="flex" justifyContent="center" alignItems="center">
