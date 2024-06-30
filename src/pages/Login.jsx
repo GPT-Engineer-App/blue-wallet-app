@@ -118,8 +118,8 @@ const Login = () => {
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
+        bg="blue"
       >
-        <Image src="https://marcroland84.files.wordpress.com/2024/06/copy-of-innovate-hub-2-1.png?w=1024" alt="Centered Image" objectFit="contain" maxH="100%" maxW="100%" />
       </Box>
 
       {/* Login Button and Text Container */}
