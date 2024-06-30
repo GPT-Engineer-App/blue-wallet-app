@@ -1,4 +1,4 @@
-import { Box, Flex, IconButton, Text, Button, Link, Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure, Divider, useColorMode, Switch, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
+import { Box, Flex, IconButton, Text, Button, Link, Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent, DrawerCloseButton, useDisclosure, Divider, useColorMode, Switch, Menu, MenuButton, MenuList, MenuItem, Image, Grid, GridItem } from "@chakra-ui/react";
 import { FaBars, FaBell, FaHome, FaUser, FaCog, FaQrcode, FaExchangeAlt, FaWallet } from "react-icons/fa";
 
 const Ewallet = () => {
@@ -102,14 +102,73 @@ const Ewallet = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Text fontSize="2xl" fontWeight="bold" mb={4}>Welcome to your E-wallet</Text>
-        <Text fontSize="lg" mb={6}>Manage your transactions and balance here.</Text>
-        <Button colorScheme="purple" mb={2} width="80%" _hover={{ bg: "purple.600" }} fontWeight="bold" color="white" paddingTop="12px" paddingBottom="12px">
-          View Transactions
-        </Button>
-        <Button colorScheme="purple" mb={2} width="80%" _hover={{ bg: "purple.600" }} fontWeight="bold" color="white" paddingTop="12px" paddingBottom="12px">
-          Add Funds
-        </Button>
+        <Box textAlign="center" mb={4}>
+          <Text fontSize="2xl" fontWeight="bold">Hello!</Text>
+          <Button colorScheme="blue" size="sm" ml={2}>HELP</Button>
+        </Box>
+        <Box
+          width="100%"
+          bg="blue.500"
+          p={4}
+          borderRadius="md"
+          color="white"
+          textAlign="center"
+          mb={4}
+        >
+          <Text fontSize="xl" fontWeight="bold">₱ 37.98</Text>
+          <Text fontSize="md">AED 2.34</Text>
+          <Button colorScheme="blue" size="sm" mt={2}>+ Cash In</Button>
+        </Box>
+        <Grid templateColumns="repeat(3, 1fr)" gap={6} mb={4}>
+          <GridItem>
+            <Button variant="ghost" leftIcon={<FaExchangeAlt />} justifyContent="flex-start" width="100%">Send</Button>
+          </GridItem>
+          <GridItem>
+            <Button variant="ghost" leftIcon={<FaQrcode />} justifyContent="flex-start" width="100%">Load</Button>
+          </GridItem>
+          <GridItem>
+            <Button variant="ghost" leftIcon={<FaHome />} justifyContent="flex-start" width="100%">Transfer</Button>
+          </GridItem>
+          <GridItem>
+            <Button variant="ghost" leftIcon={<FaBell />} justifyContent="flex-start" width="100%">Bills</Button>
+          </GridItem>
+          <GridItem>
+            <Button variant="ghost" leftIcon={<FaUser />} justifyContent="flex-start" width="100%">Borrow</Button>
+          </GridItem>
+          <GridItem>
+            <Button variant="ghost" leftIcon={<FaCog />} justifyContent="flex-start" width="100%">GSave</Button>
+          </GridItem>
+          <GridItem>
+            <Button variant="ghost" leftIcon={<FaWallet />} justifyContent="flex-start" width="100%">GInsure</Button>
+          </GridItem>
+          <GridItem>
+            <Button variant="ghost" leftIcon={<FaExchangeAlt />} justifyContent="flex-start" width="100%">GInvest</Button>
+          </GridItem>
+          <GridItem>
+            <Button variant="ghost" leftIcon={<FaQrcode />} justifyContent="flex-start" width="100%">GLife</Button>
+          </GridItem>
+          <GridItem>
+            <Button variant="ghost" leftIcon={<FaHome />} justifyContent="flex-start" width="100%">A+ Rewards</Button>
+          </GridItem>
+          <GridItem>
+            <Button variant="ghost" leftIcon={<FaBell />} justifyContent="flex-start" width="100%">GForest</Button>
+          </GridItem>
+          <GridItem>
+            <Button variant="ghost" leftIcon={<FaUser />} justifyContent="flex-start" width="100%">Cards</Button>
+          </GridItem>
+        </Grid>
+        <Button colorScheme="blue" size="sm" mb={4}>View All Services</Button>
+        <Box
+          width="100%"
+          bg="blue.500"
+          p={4}
+          borderRadius="md"
+          color="white"
+          textAlign="center"
+        >
+          <Text fontSize="lg" fontWeight="bold">GCash Exclusives</Text>
+          <Text fontSize="md">Stream all you want with Giga Video 50</Text>
+        </Box>
       </Box>
 
       <Box
