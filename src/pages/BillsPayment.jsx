@@ -31,7 +31,7 @@ const Ewallet = () => {
     >
       <Box
         width="100%"
-        bg="gray.900"
+        bg="white" // Changed to white
         p={4}
         borderRadius="0 0 2xl 2xl"
         color="white"
@@ -174,7 +174,7 @@ const Ewallet = () => {
       <Box
         as="footer"
         width="100%"
-        bg="gray.900"
+        bg="white" // Changed to white
         height="60px"
         position="sticky"
         bottom="0"
