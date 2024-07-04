@@ -13,7 +13,7 @@ const headerFooterColor = darkBlue; // Header and Footer Color
 const rowColor = white; // Row Color
 const dirtyWhite = "#E8E8E8"; // Dirty White Color
 
-const Index = () => {
+const Login = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [isDark, setIsDark] = useState(colorMode === "dark");
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -231,4 +231,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Login;
